@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 1</title>
+</head>
+<body>
+    <script>
+
+        // Câu 1 - a:
+        function generateArray(size){
+            let array=[];
+            for (let i=0;i<size;i++){
+                array[i]=Math.floor(Math.random()*81+10)
+            }
+            return array;
+        }
+
+        console.log(generateArray(10));
+        
+        // Câu 1 - b:
+
+        function printArray(arr){
+            return arr.join("-");
+        }
+
+
+    // Câu 1 - c
+
+    function isPrime(n){
+        if (n==2 || 2 == 3) return true;
+        if (n>3) { 
+            let count=0;
+            for (let i=2;i<n;i++){
+                if (n%i==0) count +=1;
+            }
+            if (count == 0) return true;
+            
+        }return false;
+
+        
+    }
+
+
+    // Câu 1 - d
+    function printPrimes(arr){
+        return arr.filter(el => isPrime(el) == true).join(",");
+    }
+
+    
+
+
+    // Câu 1 - e
+    function sumPrimes(arr){
+        let result =0;
+        arr.forEach(el => {
+            if (isPrime(el)==true) result+=el;
+        })
+        return result;
+        
+    }
+    
+
+    // Câu 1-f
+    function main(){
+        let size = +prompt('Input size: ')
+        while (isNaN(size)== true || size<0){
+            size = +prompt('Input size: ')
+        }
+
+        let array = generateArray(size);
+        console.log(array);
+
+        console.log(printPrimes(array));
+        console.log(sumPrimes(array));
+    }
+    main()
+    </script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 3</title>
+</head>
+<body>
+    <script>
+        class Employee{
+            constructor(name,age,addres,salary,totalWorkingHours) {
+                this.name = name;
+                this.age = age;
+                this.addres = addres;
+                this.salary = salary;
+                this.totalWorkingHours = totalWorkingHours;
+            }
+
+            inputWorkingHours(hours){
+                return this.totalWorkingHours = hours;
+            }
+
+            printInfo(){
+                document.write(`Nhân viên có tên: ${this.name}, tuổi: ${this.age}, lương: ${this.salary}$ và giờ làm việc: ${this.totalWorkingHours} <br>`)
+            }
+
+            calculatorBonus(){
+                let bonus;
+                if (this.totalWorkingHours >= 200) {
+                    bonus = this.salary * 0.2;
+                }
+                else if (this.totalWorkingHours >= 100) {
+                    bonus = this.salary * 0.1;
+                }   else bonus = 0;
+                return bonus;
+            }
+                
+            
+
+        }
+
+        let emp1 = new Employee("An",18,"Hue",1000,);
+        let emp2 = new Employee("Binh",18,"Hue",900,);
+        let emp3 = new Employee("Dat",18,"Hue",900,);
+
+        // Đối tượng An:
+
+        emp1.inputWorkingHours(200);
+        emp1.printInfo();
+        document.write(`Bonus của ${emp1.name} là ${emp1.calculatorBonus()}$ <br>`)
+        
+
+        // Đối tượng Bình:
+
+        emp2.inputWorkingHours(150);
+        emp2.printInfo();
+        document.write(`Bonus của ${emp2.name} là ${emp2.calculatorBonus()}$ <br>`)
+
+
+        // Đối tượng Đạt:
+
+        emp3.inputWorkingHours(90);
+        emp3.printInfo();
+        document.write(`Bonus của ${emp3.name} là ${emp3.calculatorBonus()}$ <br>`)
+
+
+
+    </script>
+</body>
+</html>
