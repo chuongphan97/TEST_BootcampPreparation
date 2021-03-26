@@ -9,8 +9,8 @@
 <body>
     <script>
         function isNarcissisticNumber(number){
-            let str = number.toString();
-            let arrString = str.split("");
+            
+            let arrString = number.toString().split("");
             let result = 0;
             for (let i=0;i<arrString.length;i++){
                 result += Math.pow(arrString[i],arrString.length);
