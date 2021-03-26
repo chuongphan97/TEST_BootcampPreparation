@@ -18,7 +18,7 @@
             return array;
         }
 
-        console.log(generateArray(10));
+        
         
         // Câu 1 - b:
 
@@ -69,12 +69,10 @@
         while (isNaN(size)== true || size<0){
             size = +prompt('Input size: ')
         }
-
-        let array = generateArray(size);
-        console.log(array);
-
-        console.log(printPrimes(array));
-        console.log(sumPrimes(array));
+        let arrayTest = generateArray(size);
+        console.log(arrayTest);
+        console.log(printPrimes(arrayTest));
+        console.log(sumPrimes(arrayTest));
     }
     main()
     </script>
